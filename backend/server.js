@@ -2,7 +2,7 @@ import express from "express"
 import cors from "cors"
 import { connectDB } from "./config/db.js"
 import foodRouter from "./routes/foodRoute.js"
-
+import dotenv from "dotenv";
 
 
 // app config
@@ -12,6 +12,8 @@ const port = 4000
 // middleware
 app.use(express.json())
 app.use(cors())
+
+dotenv.config();
 
 // DB connection
 connectDB();
