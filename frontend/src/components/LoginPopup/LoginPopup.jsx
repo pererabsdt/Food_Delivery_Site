@@ -48,10 +48,13 @@ const LoginPopup = ({setShowLogin}) => {
             <input name='password' onChange={onChangeHandler} value={data.password} type="password" placeholder='Password' required />
         </div>
         <button type='submit'>{currState==="Sign Up" ? "Create account" : "Login"}</button>
-        <div className="login-popup-condition">
-            <input type="checkbox" required />
-            <p>By continuing, I agree to the Terms of Use and Privacy Policy</p>
-        </div>
+        {currState==="Sign Up" ?
+         <div className="login-popup-condition">
+              <input type="checkbox" required />
+              <p>By continuing, I agree to the Terms of Use and Privacy Policy</p>
+          </div>
+        : <></>}
+        
         {currState==="Login"
         ?<p>Create a New Account? <span onClick={()=>setCurrState("Sign Up")}>Click Here</span></p>
         :<p>Already have an account? <span onClick={()=>setCurrState("Login")}>Login Here</span></p>

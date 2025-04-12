@@ -20,9 +20,9 @@ const loginUser = async (req, res) => {
         }
 
         const token = createToken(user.id)
-        res.json({success,})
+        res.json({success:true, token});
     } catch (error) {
-        console/log(error);
+        console.log(error);
         
     }
 }
