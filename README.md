@@ -1,4 +1,4 @@
-# 🍕 Tomato - Food Delivery Website
+# Food Delivery Website
 
 A full-stack food delivery application built with the MERN stack, featuring a customer-facing frontend, admin panel, and robust backend API with payment integration.
 
